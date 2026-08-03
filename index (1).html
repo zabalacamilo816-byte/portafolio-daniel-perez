@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Pérez — Desarrollador Web</title>
+  <meta name="description" content="Portafolio personal de Daniel Pérez, estudiante de Ingeniería Web I.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="logo">D. Pérez<span class="logo-dot">_</span></p>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero" aria-label="Presentación">
+      <p class="hero-eyebrow">Portafolio — Ingeniería Web I</p>
+      <h1>Construyo interfaces que ordenan bien el caos.</h1>
+      <p class="hero-lede">
+        Estudiante de Ingeniería Web enfocada en maquetación semántica,
+        accesibilidad y layouts que se adaptan sin perder el hilo entre
+        un teléfono y un monitor de escritorio.
+      </p>
+      <a class="cta" href="#proyectos">Ver proyectos ↓</a>
+    </section>
+
+    <section id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+      <h2 id="sobre-mi-titulo">Sobre mí</h2>
+      <div class="about-grid">
+        <article class="about-text">
+          <p>
+            Curso el segundo semestre de Ingeniería Web. Me interesa
+            especialmente el diseño responsivo: cómo una misma estructura
+            HTML puede reorganizarse por completo solo cambiando propiedades
+            CSS, sin tocar el marcado.
+          </p>
+          <p>
+            Esta página está construida exclusivamente con etiquetas HTML5
+            semánticas (<code>header</code>, <code>nav</code>,
+            <code>main</code>, <code>section</code>, <code>article</code>,
+            <code>footer</code>) y usa Flexbox para pasar de una columna en
+            pantallas menores a 768px a un layout de tres columnas en
+            escritorio.
+          </p>
+        </article>
+        <aside class="about-stats" aria-label="Habilidades técnicas">
+          <ul>
+            <li><span class="stat-label">HTML5</span><span class="stat-bar" style="--w:90%"></span></li>
+            <li><span class="stat-label">CSS / Flexbox</span><span class="stat-bar" style="--w:80%"></span></li>
+            <li><span class="stat-label">Accesibilidad</span><span class="stat-bar" style="--w:65%"></span></li>
+            <li><span class="stat-label">JavaScript</span><span class="stat-bar" style="--w:45%"></span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="proyectos" aria-labelledby="proyectos-titulo">
+      <h2 id="proyectos-titulo">Proyectos</h2>
+      <p class="section-intro">
+        Tres piezas del laboratorio de esta unidad. En pantallas de
+        escritorio se muestran en tres columnas; en móvil se apilan en una.
+      </p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-tag">01 · Semántica</p>
+          <h3>Landing informativa</h3>
+          <p>
+            Estructura de página con <code>header</code>, <code>nav</code>,
+            <code>main</code> y <code>footer</code> únicos, validada con el
+            validador de marcado del W3C.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <p class="project-tag">02 · Layout</p>
+          <h3>Galería con Flexbox</h3>
+          <p>
+            Contenedor <code>flex</code> con <code>justify-content</code>,
+            <code>align-items</code> y <code>flex-wrap</code> para distribuir
+            tarjetas sin usar floats ni posicionamiento absoluto.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <p class="project-tag">03 · Accesibilidad</p>
+          <h3>Formulario de contacto</h3>
+          <p>
+            Cada campo enlazado a su <code>label</code> mediante
+            <code>for</code>/<code>id</code>, revisado con la extensión WAVE.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <h2 id="contacto-titulo">Contacto</h2>
+      <p class="section-intro">
+        Formulario accesible: cada campo está asociado a su etiqueta y el
+        envío no depende de un servidor real, es solo demostrativo.
+      </p>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="colaboracion">Propuesta de colaboración</option>
+            <option value="freelance">Trabajo freelance</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-row form-row-full">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="cta">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Daniel Pérez — Guía de laboratorio, Ingeniería Web I.</p>
+    <p class="footer-note">Hecho con HTML5 semántico y CSS Flexbox, sin frameworks.</p>
+  </footer>
+
+</body>
+</html>
